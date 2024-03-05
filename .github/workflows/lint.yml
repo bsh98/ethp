@@ -16,10 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Get latest version of nightly Rust
-      run: rustup update nightly
-    - name: Add rustfmt
-      run: rustup component add rustfmt
+    - uses: dtolnay/rust-toolchain@nightly
+      with:
+        components: rustfmt
     - name: Check formatting with cargo fmt
       run: cargo +nightly fmt --all --verbose --check
 
