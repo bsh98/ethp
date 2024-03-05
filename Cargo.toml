@@ -1,0 +1,22 @@
+[package]
+name = "ethp"
+version = "0.1.0"
+edition = "2021"
+authors = ["Brendon Harrison (@bsh98)"]
+description = "Macros for evaluating common Ethereum and blockchain functions at compile time."
+readme = "README.md"
+keywords = ["keccak", "hash", "crypto", "ethereum"]
+categories = ["cryptography"]
+repository = "https://github.com/bsh98/ethp"
+license = "MIT"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+tiny-keccak = { version = "2.0.2", features = ["keccak"] }
+quote = "1.0.35"
+syn = "2.0.52"
+
+[dev-dependencies]
+hex-literal = "0.4.1"
