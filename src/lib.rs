@@ -13,8 +13,8 @@ use tiny_keccak::{Hasher, Keccak};
 /// # Examples
 ///
 /// ```
-/// use hex_literal::hex;
 /// use ethp::keccak256;
+/// use hex_literal::hex;
 ///
 /// assert_eq!(
 ///     keccak256!("transfer(address,uint256)"),
@@ -38,8 +38,8 @@ pub fn keccak256(tokens: TokenStream) -> TokenStream {
 /// # Examples
 ///
 /// ```
-/// use hex_literal::hex;
 /// use ethp::selector;
+/// use hex_literal::hex;
 ///
 /// assert_eq!(selector!("transfer(address,uint256)"), hex!("a9059cbb"));
 /// ```
@@ -58,8 +58,8 @@ pub fn selector(tokens: TokenStream) -> TokenStream {
 /// # Examples
 ///
 /// ```
-/// use hex_literal::hex;
 /// use ethp::{event, keccak256};
+/// use hex_literal::hex;
 ///
 /// let exp = hex!("ddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef");
 /// let hash = keccak256!("Transfer(address,address,uint256)");

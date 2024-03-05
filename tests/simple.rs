@@ -1,5 +1,5 @@
-use hex_literal::hex;
 use ethp::{keccak256, selector};
+use hex_literal::hex;
 
 #[test]
 fn selector() {
